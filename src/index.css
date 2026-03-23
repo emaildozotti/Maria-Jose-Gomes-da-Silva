@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "DM Serif Display", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary:       #3D6B4F;
+  --color-primary-dark:  #2C4E39;
+  --color-secondary:     #B5843A;
+  --color-bg-warm:       #F5EDE4;
+  --color-bg-light:      #FAF5EF;
+  --color-text-main:     #2D1E10;
+  --color-heading:       #2D1E10;
+  --color-dark:          #1C2E24;
+  --color-off-white:     #FBF7F3;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
+* { scrollbar-width: thin; scrollbar-color: var(--color-primary) transparent; }
+
+/* Shimmer */
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  padding: 1.25rem 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3D6B4F;
+  color: #FBF7F3;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.btn-shimmer:hover {
+  background-color: #2C4E39;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.18) 50%, transparent 100%);
+  transform: translateX(-150%) skewX(-20deg);
+  animation: shimmer-sweep 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Aurora blobs */
+@keyframes aurora-1 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33%       { transform: translate(40px, -30px) scale(1.15) rotate(5deg); }
+  66%       { transform: translate(-20px, 25px) scale(0.92) rotate(-3deg); }
+}
+@keyframes aurora-2 {
+  0%, 100% { transform: translate(0, 0) scale(1.1) rotate(0deg); }
+  25%       { transform: translate(-50px, 30px) scale(0.9) rotate(8deg); }
+  75%       { transform: translate(35px, -40px) scale(1.2) rotate(-6deg); }
+}
+@keyframes aurora-3 {
+  0%, 100% { transform: translate(0, 0) scale(0.95); }
+  50%       { transform: translate(20px, 20px) scale(1.05); }
+}
+
+/* Hero fadeUp */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Whitespace Ultra Premium */
+.section-padding { padding-top: 6rem; padding-bottom: 6rem; }
+.section-padding-lg { padding-top: 10rem; padding-bottom: 10rem; }
+@media (min-width: 1024px) {
+  .section-padding { padding-top: 8rem; padding-bottom: 8rem; }
+  .section-padding-lg { padding-top: 14rem; padding-bottom: 14rem; }
+}
+.container-ultra {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.eyebrow-ultra {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+
+/* Photo frame treatment B — cantos decorativos dourados */
+.photo-frame {
+  position: relative;
+  display: inline-block;
+}
+.photo-frame::before,
+.photo-frame::after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none'%3E%3Cpath d='M4 44 C4 44 4 28 12 20 C20 12 36 4 44 4' stroke='%23B5843A' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M4 36 C4 36 4 30 8 26 C12 22 18 20 22 20' stroke='%23B5843A' stroke-width='1' stroke-linecap='round' opacity='0.6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+}
+.photo-frame::before {
+  top: -12px;
+  left: -12px;
+  transform: rotate(0deg);
+}
+.photo-frame::after {
+  bottom: -12px;
+  right: -12px;
+  transform: rotate(180deg);
+}
