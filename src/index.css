@@ -89,7 +89,7 @@
   .section-padding-lg { padding-top: 14rem; padding-bottom: 14rem; }
 }
 .container-ultra {
-  max-width: 960px;
+  max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -100,6 +100,29 @@
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-weight: 400;
+}
+
+/* Photo frame treatment B — cantos decorativos dourados */
+/* Hero split layout */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  width: 100%;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+  }
+}
+.hero-text { order: 1; }
+.hero-photo { order: 2; display: flex; justify-content: center; }
+@media (min-width: 768px) {
+  .hero-text { order: 1; }
+  .hero-photo { order: 2; display: flex; justify-content: flex-end; }
+  .hero-scroll-indicator { display: flex !important; }
 }
 
 /* Photo frame treatment B — cantos decorativos dourados */

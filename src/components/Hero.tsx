@@ -100,26 +100,15 @@ export default function Hero() {
           zIndex: 2,
           display: 'flex',
           flexDirection: 'column',
-          gap: '3rem',
+          justifyContent: 'center',
           paddingTop: '5rem',
           paddingBottom: '5rem',
           minHeight: 'calc(100svh - 60px)',
-          alignItems: 'center',
         }}
       >
-        {/* Mobile: texto primeiro; Desktop: side-by-side */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr',
-          gap: '3rem',
-          width: '100%',
-          alignItems: 'center',
-        }}
-          className="md:grid-cols-[1fr_auto]"
-        >
+        <div className="hero-grid">
           {/* Lado esquerdo — copy */}
-          <div style={{ order: 1 }} className="md:order-1">
-            {/* CALLOUT */}
+          <div className="hero-text">
             <div style={{
               animation: 'fadeUp 0.9s ease forwards',
               animationDelay: '0s',
@@ -130,7 +119,6 @@ export default function Hero() {
               </span>
             </div>
 
-            {/* H1 */}
             <div style={{
               animation: 'fadeUp 0.9s ease forwards',
               animationDelay: '0.15s',
@@ -148,7 +136,6 @@ export default function Hero() {
               </h1>
             </div>
 
-            {/* SUB */}
             <div style={{
               animation: 'fadeUp 0.9s ease forwards',
               animationDelay: '0.30s',
@@ -167,7 +154,6 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* CTA */}
             <div style={{
               animation: 'fadeUp 0.9s ease forwards',
               animationDelay: '0.45s',
@@ -180,49 +166,33 @@ export default function Hero() {
           </div>
 
           {/* Lado direito — foto */}
-          <div style={{ order: 2 }} className="md:order-2 flex justify-center">
+          <div className="hero-photo">
             <div style={{
               animation: 'fadeUp 0.9s ease forwards',
               animationDelay: '0.2s',
               opacity: 0,
             }}>
               <div className="photo-frame" style={{ display: 'inline-block' }}>
-                <div style={{
-                  width: 'clamp(200px, 35vw, 320px)',
-                  aspectRatio: '3/4',
-                  borderRadius: '12px',
-                  overflow: 'hidden',
-                  border: '1px solid rgba(181,132,58,0.25)',
-                  background: 'linear-gradient(135deg, #2C4E39 0%, #3D6B4F 60%, #4A7A5C 100%)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '1rem',
-                }}>
-                  <svg width="64" height="80" viewBox="0 0 64 80" fill="none" xmlns="http://www.w3.org/2000/svg" opacity="0.5">
-                    <path d="M32 40C32 40 10 58 10 34C10 18 20 8 32 8C44 8 54 18 54 34C54 58 32 40 32 40Z" stroke="#B5843A" strokeWidth="1.5" fill="none"/>
-                    <path d="M32 72L32 40" stroke="#B5843A" strokeWidth="1" strokeLinecap="round" strokeDasharray="2 3"/>
-                    <circle cx="32" cy="22" r="8" fill="rgba(181,132,58,0.2)" stroke="#B5843A" strokeWidth="1"/>
-                    <path d="M20 55C20 55 24 50 32 50C40 50 44 55 44 55" stroke="#B5843A" strokeWidth="1" strokeLinecap="round"/>
-                  </svg>
-                  <span style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '0.6875rem',
-                    color: 'rgba(181,132,58,0.6)',
-                    letterSpacing: '0.12em',
-                    textTransform: 'uppercase',
-                  }}>
-                    Foto em breve
-                  </span>
-                </div>
+                <img
+                  src="/hero.jpeg"
+                  alt="Maria José Gomes da Silva, psicóloga especializada em dependência emocional"
+                  style={{
+                    width: 'clamp(260px, 28vw, 380px)',
+                    aspectRatio: '3/4',
+                    borderRadius: '16px 4px 16px 4px',
+                    border: '1px solid rgba(181,132,58,0.25)',
+                    objectFit: 'cover',
+                    objectPosition: 'center top',
+                    display: 'block',
+                  }}
+                />
               </div>
             </div>
           </div>
         </div>
 
         {/* Scroll indicator — apenas desktop */}
-        <div className="hidden md:flex" style={{
+        <div className="hero-scroll-indicator" style={{
           position: 'absolute',
           bottom: '2.5rem',
           left: '50%',
@@ -230,6 +200,7 @@ export default function Hero() {
           flexDirection: 'column',
           alignItems: 'center',
           gap: '0.5rem',
+          display: 'none',
         }}>
           <span style={{ fontFamily: 'var(--font-sans)', fontSize: '0.6875rem', color: 'rgba(251,247,243,0.4)', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
             continuar

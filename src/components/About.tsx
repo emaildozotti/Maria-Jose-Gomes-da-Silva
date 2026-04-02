@@ -30,35 +30,19 @@ export default function About() {
                   marginTop: '1rem',
                 }}
               >
-                <div
+                <img
+                  src="/bio.jpeg"
+                  alt="Maria José Gomes da Silva"
                   style={{
                     width: 'clamp(220px, 38vw, 340px)',
                     aspectRatio: '3/4',
-                    borderRadius: '12px',
+                    borderRadius: '16px 4px 16px 4px',
                     overflow: 'hidden',
-                    background: 'linear-gradient(160deg, #E8D9CC 0%, #D4C2B0 100%)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: '1rem',
+                    objectFit: 'cover',
+                    objectPosition: 'center top',
+                    display: 'block',
                   }}
-                >
-                  <svg width="64" height="80" viewBox="0 0 64 80" fill="none" opacity="0.4">
-                    <path d="M32 40C32 40 10 58 10 34C10 18 20 8 32 8C44 8 54 18 54 34C54 58 32 40 32 40Z" stroke="#B5843A" strokeWidth="1.5" fill="none"/>
-                    <circle cx="32" cy="22" r="8" fill="rgba(181,132,58,0.15)" stroke="#B5843A" strokeWidth="1"/>
-                    <path d="M18 58C18 58 22 52 32 52C42 52 46 58 46 58" stroke="#B5843A" strokeWidth="1" strokeLinecap="round"/>
-                  </svg>
-                  <span style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '0.6875rem',
-                    color: 'rgba(181,132,58,0.5)',
-                    letterSpacing: '0.1em',
-                    textTransform: 'uppercase',
-                  }}>
-                    Foto em breve
-                  </span>
-                </div>
+                />
               </div>
             </div>
           </FadeIn>

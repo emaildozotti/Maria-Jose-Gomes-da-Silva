@@ -46,36 +46,16 @@ export default function VideoSection() {
               overflow: 'hidden',
               border: '1px solid rgba(181,132,58,0.3)',
               boxShadow: '0 24px 80px rgba(0,0,0,0.4)',
-              background: 'linear-gradient(180deg, #2C4E39 0%, #1C2E24 100%)',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '1.25rem',
             }}>
-              <div style={{
-                width: '56px',
-                height: '56px',
-                borderRadius: '50%',
-                backgroundColor: 'rgba(181,132,58,0.15)',
-                border: '1px solid rgba(181,132,58,0.4)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M7 5L16 10L7 15V5Z" fill="#B5843A" opacity="0.8"/>
-                </svg>
-              </div>
-              <span style={{
-                fontFamily: 'var(--font-sans)',
-                fontSize: '0.6875rem',
-                color: 'rgba(181,132,58,0.5)',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-              }}>
-                Vídeo em breve
-              </span>
+              <iframe
+                src="https://www.youtube.com/embed/2v3elqvISwc"
+                title="Mensagem de Maria José Gomes da Silva"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+                frameBorder={0}
+                style={{ width: '100%', height: '100%', border: 'none' }}
+              />
             </div>
           </div>
         </FadeIn>
