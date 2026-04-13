@@ -20,7 +20,7 @@ export default function Hero() {
             fontSize: '1.125rem',
             letterSpacing: '0.01em',
           }}>
-            Maria José Gomes da Silva
+            Maze Gomes
           </span>
           <a
             href="#dores"
@@ -175,7 +175,7 @@ export default function Hero() {
               <div className="photo-frame" style={{ display: 'inline-block' }}>
                 <img
                   src="/hero.jpeg"
-                  alt="Maria José Gomes da Silva, psicóloga especializada em dependência emocional"
+                  alt="Maze Gomes, psicóloga especializada em dependência emocional"
                   style={{
                     width: 'clamp(260px, 28vw, 380px)',
                     aspectRatio: '3/4',

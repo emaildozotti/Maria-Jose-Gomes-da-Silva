@@ -32,7 +32,7 @@ export default function About() {
               >
                 <img
                   src="/bio.jpeg"
-                  alt="Maria José Gomes da Silva"
+                  alt="Maze Gomes"
                   style={{
                     width: 'clamp(220px, 38vw, 340px)',
                     aspectRatio: '3/4',

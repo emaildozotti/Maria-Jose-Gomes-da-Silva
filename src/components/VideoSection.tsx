@@ -49,7 +49,7 @@ export default function VideoSection() {
             }}>
               <iframe
                 src="https://www.youtube.com/embed/2v3elqvISwc"
-                title="Mensagem de Maria José Gomes da Silva"
+                title="Mensagem de Maze Gomes"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"

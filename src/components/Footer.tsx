@@ -86,7 +86,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="btn-shimmer"
             >
-              Quero conversar com a Maria José
+              Quero conversar com a Maze
             </a>
           </div>
         </FadeIn>
@@ -104,7 +104,7 @@ export default function Footer() {
               color: 'rgba(251,247,243,0.55)',
               marginBottom: '0.5rem',
             }}>
-              Maria José
+              Maze
             </p>
             <p style={{
               fontFamily: 'var(--font-sans)',
