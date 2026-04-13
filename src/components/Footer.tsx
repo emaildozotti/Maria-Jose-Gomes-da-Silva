@@ -113,7 +113,7 @@ export default function Footer() {
               letterSpacing: '0.06em',
               fontWeight: 300,
             }}>
-              Psicóloga · Dependência Emocional e Terapia de Casal · Online para todo o Brasil
+              Terapeuta · Dependência Emocional e Terapia de Casal · Online para todo o Brasil
             </p>
           </div>
         </FadeIn>

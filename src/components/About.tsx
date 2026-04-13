@@ -1,8 +1,8 @@
 import { FadeIn } from './FadeIn'
 
 const credenciais = [
-  'Psicóloga especializada em Dependência Emocional e Terapia de Casal',
-  'Formação em Psicologia das Relações Conjugais e Abordagem Humanista',
+  'Terapeuta especializada em Dependência Emocional e Terapia de Casal',
+  'Formação em Relações Conjugais e Abordagem Humanista',
   'Atendimento online para todo o Brasil',
 ]
 

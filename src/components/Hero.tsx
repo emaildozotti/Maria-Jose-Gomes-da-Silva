@@ -175,7 +175,7 @@ export default function Hero() {
               <div className="photo-frame" style={{ display: 'inline-block' }}>
                 <img
                   src="/hero.jpeg"
-                  alt="Maze Gomes, psicóloga especializada em dependência emocional"
+                  alt="Maze Gomes, terapeuta especializada em dependência emocional"
                   style={{
                     width: 'clamp(260px, 28vw, 380px)',
                     aspectRatio: '3/4',
